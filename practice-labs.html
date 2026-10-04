@@ -50,15 +50,33 @@
       border-radius: 10px;
       box-shadow: 0 4px 14px rgba(53,16,79,.1);
     }
-    h2 {
-      margin: 30px 0 14px;
-      color: var(--purple-dark);
-      font-size: 1.55rem;
+    .halves {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+    .half {
+      padding: 18px;
+      background: rgba(255,255,255,.58);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 5px 16px rgba(53,16,79,.08);
+    }
+    .half h2 {
+      margin: -18px -18px 18px;
+      padding: 15px 18px;
+      color: white;
+      background: var(--purple);
+      border-bottom: 6px solid var(--gold);
+      border-radius: 14px 14px 0 0;
+      font-size: 1.45rem;
+      text-align: center;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
+      grid-template-columns: 1fr;
+      gap: 14px;
     }
     .lab {
       display: flex;
@@ -109,8 +127,8 @@
       text-align: center;
       background: var(--purple-dark);
     }
-    @media (max-width: 700px) {
-      .grid { grid-template-columns: 1fr; }
+    @media (max-width: 760px) {
+      .halves { grid-template-columns: 1fr; }
       header { padding-top: 28px; }
     }
   </style>
@@ -126,8 +144,10 @@
       <strong>Before you begin:</strong> Enter your first name, last name, and class block exactly as your teacher instructed. You may repeat a lab to improve your score.
     </div>
 
-    <h2>1st Half Practice Labs</h2>
-    <div class="grid">
+    <div class="halves">
+      <section class="half">
+        <h2>1st Half Practice Labs</h2>
+        <div class="grid">
       <a class="lab" href="https://cyhendrix.github.io/Intro-to-HTML/" target="_blank" rel="noopener">
         <span class="number">2</span><span><strong>Introduction to HTML</strong><span>HTML structure, elements, tags, and debugging</span></span>
       </a>
@@ -143,10 +163,12 @@
       <a class="lab" href="https://cyhendrix.github.io/ist09StylingCSSElements/" target="_blank" rel="noopener">
         <span class="number">9</span><span><strong>Styling Elements with CSS</strong><span>External stylesheets and element styling</span></span>
       </a>
-    </div>
+        </div>
+      </section>
 
-    <h2>2nd Half Practice Labs</h2>
-    <div class="grid">
+      <section class="half">
+        <h2>2nd Half Practice Labs</h2>
+        <div class="grid">
       <a class="lab" href="https://cyhendrix.github.io/ist11CSSClasses/" target="_blank" rel="noopener">
         <span class="number">11</span><span><strong>CSS Classes</strong><span>Class selectors and reusable styles</span></span>
       </a>
@@ -162,6 +184,8 @@
       <a class="lab" href="https://cyhendrix.github.io/ist18cssPseudoClasses/" target="_blank" rel="noopener">
         <span class="number">18</span><span><strong>CSS Pseudo-classes</strong><span>Link states, hover effects, and interactive styling</span></span>
       </a>
+        </div>
+      </section>
     </div>
   </main>
 
