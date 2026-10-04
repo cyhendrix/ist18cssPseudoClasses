@@ -121,6 +121,38 @@
       color: #4e4654;
       font-size: .94rem;
     }
+    .score-link-area {
+      margin-top: 26px;
+      padding: 22px;
+      text-align: center;
+      background: var(--cream);
+      border: 3px solid var(--gold);
+      border-radius: 16px;
+      box-shadow: 0 5px 16px rgba(53,16,79,.1);
+    }
+    .score-link-area h2 {
+      margin: 0 0 7px;
+      color: var(--purple-dark);
+      font-size: 1.4rem;
+    }
+    .score-link-area p {
+      margin: 0 0 15px;
+    }
+    .score-link {
+      display: inline-block;
+      padding: 14px 24px;
+      color: white;
+      background: var(--purple);
+      border-radius: 10px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .score-link:hover, .score-link:focus {
+      background: var(--purple-dark);
+      text-decoration: underline;
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
     footer {
       padding: 20px;
       color: white;
@@ -187,6 +219,11 @@
         </div>
       </section>
     </div>
+    <section class="score-link-area">
+      <h2>Ready to Check Your Progress?</h2>
+      <p>View your recorded practice-lab scores and see which labs still need to be completed.</p>
+      <a class="score-link" href="https://script.google.com/a/macros/benhillschools.org/s/AKfycbzFym_G2mlc6py7jRbfRFKZo29gr8GEitbJQyltBtIqxsmWZ9czlWTTW5KalBqdxfynNg/exec" target="_blank" rel="noopener">View My Practice-Lab Scores</a>
+    </section>
   </main>
 
   <footer>Fitzgerald High School College and Career Academy • Intro to Software Technology</footer>
