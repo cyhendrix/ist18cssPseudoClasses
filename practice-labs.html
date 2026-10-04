@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IST Web Development Practice Labs</title>
+  <style>
+    :root {
+      --purple: #4f2170;
+      --purple-dark: #35104f;
+      --gold: #f4c542;
+      --cream: #fffaf0;
+      --ink: #17121d;
+      --card: #ffffff;
+      --border: #d8c8e3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(135deg, #f7f0fb, var(--cream));
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+    header {
+      padding: 36px 20px 30px;
+      color: white;
+      text-align: center;
+      background: var(--purple);
+      border-bottom: 8px solid var(--gold);
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+    header p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+    main {
+      width: min(1050px, 92%);
+      margin: 30px auto 48px;
+    }
+    .intro {
+      padding: 18px 22px;
+      margin-bottom: 28px;
+      background: white;
+      border-left: 7px solid var(--gold);
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(53,16,79,.1);
+    }
+    h2 {
+      margin: 30px 0 14px;
+      color: var(--purple-dark);
+      font-size: 1.55rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .lab {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      min-height: 104px;
+      padding: 17px;
+      color: var(--ink);
+      text-decoration: none;
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(53,16,79,.08);
+      transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+    .lab:hover, .lab:focus {
+      transform: translateY(-2px);
+      border-color: var(--purple);
+      box-shadow: 0 7px 18px rgba(53,16,79,.16);
+      outline: none;
+    }
+    .number {
+      display: grid;
+      flex: 0 0 52px;
+      height: 52px;
+      place-items: center;
+      color: white;
+      background: var(--purple);
+      border: 4px solid var(--gold);
+      border-radius: 50%;
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+    .lab strong {
+      display: block;
+      color: var(--purple-dark);
+      font-size: 1.08rem;
+    }
+    .lab span:last-child {
+      display: block;
+      margin-top: 3px;
+      color: #4e4654;
+      font-size: .94rem;
+    }
+    footer {
+      padding: 20px;
+      color: white;
+      text-align: center;
+      background: var(--purple-dark);
+    }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      header { padding-top: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IST Web Development Practice Labs</h1>
+    <p>Select the lesson you need. Complete every activity, check your final grade, and submit your results.</p>
+  </header>
+
+  <main>
+    <div class="intro">
+      <strong>Before you begin:</strong> Enter your first name, last name, and class block exactly as your teacher instructed. You may repeat a lab to improve your score.
+    </div>
+
+    <h2>1st Half Practice Labs</h2>
+    <div class="grid">
+      <a class="lab" href="https://cyhendrix.github.io/Intro-to-HTML/" target="_blank" rel="noopener">
+        <span class="number">2</span><span><strong>Introduction to HTML</strong><span>HTML structure, elements, tags, and debugging</span></span>
+      </a>
+      <a class="lab" href="https://cyhendrix.github.io/headings_and_lists/" target="_blank" rel="noopener">
+        <span class="number">3</span><span><strong>Headings and Lists</strong><span>Heading levels, ordered lists, and unordered lists</span></span>
+      </a>
+      <a class="lab" href="https://cyhendrix.github.io/istLesson06_stylingWithCSS/" target="_blank" rel="noopener">
+        <span class="number">6</span><span><strong>Styling Text with CSS</strong><span>Selectors, properties, values, and rule-sets</span></span>
+      </a>
+      <a class="lab" href="https://cyhendrix.github.io/ist08UsingImages/" target="_blank" rel="noopener">
+        <span class="number">8</span><span><strong>Using Images</strong><span>Image tags, alt text, filenames, and attribution</span></span>
+      </a>
+      <a class="lab" href="https://cyhendrix.github.io/ist09StylingCSSElements/" target="_blank" rel="noopener">
+        <span class="number">9</span><span><strong>Styling Elements with CSS</strong><span>External stylesheets and element styling</span></span>
+      </a>
+    </div>
+
+    <h2>2nd Half Practice Labs</h2>
+    <div class="grid">
+      <a class="lab" href="https://cyhendrix.github.io/ist11CSSClasses/" target="_blank" rel="noopener">
+        <span class="number">11</span><span><strong>CSS Classes</strong><span>Class selectors and reusable styles</span></span>
+      </a>
+      <a class="lab" href="https://cyhendrix.github.io/ist12OrganizingFlexbox/" target="_blank" rel="noopener">
+        <span class="number">12</span><span><strong>Organizing Content with Flexbox</strong><span>Flex containers and layout controls</span></span>
+      </a>
+      <a class="lab" href="https://cyhendrix.github.io/ist13FlexboxChildren/" target="_blank" rel="noopener">
+        <span class="number">13</span><span><strong>Flexbox Children</strong><span>Order, growth, shrinking, and individual alignment</span></span>
+      </a>
+      <a class="lab" href="https://cyhendrix.github.io/ist17linkingPages/" target="_blank" rel="noopener">
+        <span class="number">17</span><span><strong>Linking Pages</strong><span>Navigation links and multi-page websites</span></span>
+      </a>
+      <a class="lab" href="https://cyhendrix.github.io/ist18cssPseudoClasses/" target="_blank" rel="noopener">
+        <span class="number">18</span><span><strong>CSS Pseudo-classes</strong><span>Link states, hover effects, and interactive styling</span></span>
+      </a>
+    </div>
+  </main>
+
+  <footer>Fitzgerald High School College and Career Academy • Intro to Software Technology</footer>
+</body>
+</html>
