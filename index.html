@@ -10,7 +10,7 @@
 <a href="clubs.html">Explore Clubs</a></textarea></label><label>style.css<textarea id="right" spellcheck="false">/* Add all four rules below */</textarea></label></div><div class="buttons"><button id="preview" class="btn alt">Preview</button><button id="checkApply" class="btn">Check My Work</button><button id="reset" class="btn alt">Reset</button><button id="finish" class="btn alt">Finish &amp; View Grade</button></div><div id="applyF" class="feedback"></div><div class="preview"><iframe id="frame"></iframe></div><div id="submitBox" class="submit hidden"><h3>Submit Your Grade</h3><p id="result"></p><div id="breakdown"></div><p>Skipped or incorrect work receives zero points.</p><div class="buttons"><button id="submit" class="btn">Submit My Results</button><a class="btn alt" href="https://script.google.com/a/macros/benhillschools.org/s/AKfycbzFym_G2mlc6py7jRbfRFKZo29gr8GEitbJQyltBtIqxsmWZ9czlWTTW5KalBqdxfynNg/exec" target="_blank" rel="noopener" style="display:inline-block;margin-left:8px;text-decoration:none">View My Practice-Lab Scores</a><button id="reviewMissed" class="btn alt hidden">Review Incorrect Answers</button></div><div id="missed" class="hidden"></div><div id="submitF" class="feedback"></div></div></section></div><iframe name="formTarget" class="hidden"></iframe></main><footer>Lesson 18 CSS Pseudo Classes Practice Lab</footer>
 <div id="notice" class="notice hidden"><div><h2>Grade Submitted!</h2><p id="noticeText"></p><button id="close" class="btn">Close</button></div></div>
 <script>
-const C={"title":"Lesson 18 CSS Pseudo Classes","subtitle":"Identify, order, debug, and apply interactive link styles","form":"ist18cssPseudoClasses","reminder":"Use the four link states in LVHA order. Each state needs its own CSS rule.","example":"selector:pseudo-class {\n    property: value;\n}","questions":[{"q":"Which pseudo-class styles an unvisited link?","a":":link","w":[":visited",":hover",":active"],"e":"This pseudo-class targets an unvisited hyperlink."},{"q":"Which applies when the pointer is over a link?","a":":hover","w":[":link",":visited",":active"],"e":"This pseudo-class applies while the pointer is over the element."},{"q":"Which applies while a link is being clicked?","a":":active","w":[":hover",":visited",":link"],"e":"This pseudo-class applies while the link is being clicked."},{"q":"Which styles a previously visited link?","a":":visited","w":[":active",":hover",":link"],"e":"This pseudo-class targets a previously visited link."},{"q":"What is the recommended order?","a":"link, visited, hover, active","w":["hover, active, link, visited","active, hover, visited, link","visited, link, active, hover"],"e":"Remember LVHA."}],"practice":[{"title":"Practice 1","prompt":"Write a rule that makes a link orange when hovered.","hint":"Build a rule for the pointer-over state. Include a selector, braces, and a color declaration.","start":"/* Write the rule */","need":["a:hover","color: orange"],"error":"Check the pseudo-class state, braces, property, value, colon, and semicolon. Edit your code and try again."},{"title":"Practice 2","prompt":"Write a rule that makes an active link red.","hint":"Build a rule for the being-clicked state. Include a selector, braces, and a color declaration.","start":"/* Write the rule */","need":["a:active","color: red"],"error":"Check the pseudo-class state, braces, property, value, colon, and semicolon. Edit your code and try again."}],"debug":[{"title":"Debug 1","prompt":"The pointer-over style is not working. Find and correct the error.","hint":"Inspect the punctuation between the element selector and its state.","start":"a hover {\n    color: orange;\n}","need":["a:hover","color: orange"],"error":"The selector punctuation is still incorrect. Compare its structure with the pseudo-class reminder and try again."},{"title":"Debug 2","prompt":"The previously opened link is not receiving its style. Find and correct the error.","hint":"Inspect the spelling of the link state.","start":"a:visit {\n    color: purple;\n}","need":["a:visited","color: purple"],"error":"The link-state name is still incorrect. Check its spelling and try again."},{"title":"Debug 3","prompt":"The style for a link being clicked is not working. Find and correct the error.","hint":"Inspect the punctuation inside the declaration.","start":"a:active {\n    color red\n}","need":["a:active","color: red;"],"error":"The declaration punctuation is still incorrect. Check the property, value, colon, and semicolon, then try again."}],"applyTitle":"Style All Four Link States","steps":["Keep the HTML link unchanged.","Add rules for all four link states.","Follow LVHA order and use the assigned colors.","Preview and check your work."],"leftLabel":"index.html","rightLabel":"style.css","leftStart":"\u003ch1>School Clubs\u003c/h1>\n\u003ca href=\"clubs.html\">Explore Clubs\u003c/a>","rightStart":"/* Add all four rules below */","mode":"css","needLeft":["\u003ca","href=\"clubs.html\"","\u003c/a>"],"needRight":["a:link","color: blue","a:visited","color: purple","a:hover","color: orange","a:active","color: red"],"applyError":"Add all four link-state rules with the requested colors in LVHA order."},$=x=>document.getElementById(x);let S={review:0,practice:0,debug:0,apply:0},qa=Array(5).fill(false),pa=Array(C.practice.length).fill(false),da=Array(C.debug.length).fill(false),qi=0,miss={};
+const C={"title":"Lesson 18 CSS Pseudo Classes","subtitle":"Identify, order, debug, and apply interactive link styles","form":"Lesson 18 | Pseudo-classes","reminder":"Use the four link states in LVHA order. Each state needs its own CSS rule.","example":"selector:pseudo-class {\n    property: value;\n}","questions":[{"q":"Which pseudo-class styles an unvisited link?","a":":link","w":[":visited",":hover",":active"],"e":"This pseudo-class targets an unvisited hyperlink."},{"q":"Which applies when the pointer is over a link?","a":":hover","w":[":link",":visited",":active"],"e":"This pseudo-class applies while the pointer is over the element."},{"q":"Which applies while a link is being clicked?","a":":active","w":[":hover",":visited",":link"],"e":"This pseudo-class applies while the link is being clicked."},{"q":"Which styles a previously visited link?","a":":visited","w":[":active",":hover",":link"],"e":"This pseudo-class targets a previously visited link."},{"q":"What is the recommended order?","a":"link, visited, hover, active","w":["hover, active, link, visited","active, hover, visited, link","visited, link, active, hover"],"e":"Remember LVHA."}],"practice":[{"title":"Practice 1","prompt":"Write a rule that makes a link orange when hovered.","hint":"Build a rule for the pointer-over state. Include a selector, braces, and a color declaration.","start":"/* Write the rule */","need":["a:hover","color: orange"],"error":"Check the pseudo-class state, braces, property, value, colon, and semicolon. Edit your code and try again."},{"title":"Practice 2","prompt":"Write a rule that makes an active link red.","hint":"Build a rule for the being-clicked state. Include a selector, braces, and a color declaration.","start":"/* Write the rule */","need":["a:active","color: red"],"error":"Check the pseudo-class state, braces, property, value, colon, and semicolon. Edit your code and try again."}],"debug":[{"title":"Debug 1","prompt":"The pointer-over style is not working. Find and correct the error.","hint":"Inspect the punctuation between the element selector and its state.","start":"a hover {\n    color: orange;\n}","need":["a:hover","color: orange"],"error":"The selector punctuation is still incorrect. Compare its structure with the pseudo-class reminder and try again."},{"title":"Debug 2","prompt":"The previously opened link is not receiving its style. Find and correct the error.","hint":"Inspect the spelling of the link state.","start":"a:visit {\n    color: purple;\n}","need":["a:visited","color: purple"],"error":"The link-state name is still incorrect. Check its spelling and try again."},{"title":"Debug 3","prompt":"The style for a link being clicked is not working. Find and correct the error.","hint":"Inspect the punctuation inside the declaration.","start":"a:active {\n    color red\n}","need":["a:active","color: red;"],"error":"The declaration punctuation is still incorrect. Check the property, value, colon, and semicolon, then try again."}],"applyTitle":"Style All Four Link States","steps":["Keep the HTML link unchanged.","Add rules for all four link states.","Follow LVHA order and use the assigned colors.","Preview and check your work."],"leftLabel":"index.html","rightLabel":"style.css","leftStart":"\u003ch1>School Clubs\u003c/h1>\n\u003ca href=\"clubs.html\">Explore Clubs\u003c/a>","rightStart":"/* Add all four rules below */","mode":"css","needLeft":["\u003ca","href=\"clubs.html\"","\u003c/a>"],"needRight":["a:link","color: blue","a:visited","color: purple","a:hover","color: orange","a:active","color: red"],"applyError":"Add all four link-state rules with the requested colors in LVHA order."},$=x=>document.getElementById(x);let S={review:0,practice:0,debug:0,apply:0},qa=Array(5).fill(false),pa=Array(C.practice.length).fill(false),da=Array(C.debug.length).fill(false),qi=0,miss={};
 const sh=a=>{for(let i=a.length-1;i;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a},esc=s=>String(s).replace(/[&<>]/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[x])),clean=s=>s.toLowerCase().replace(/\s+/g," ").replace(/\s*([:{};])\s*/g,"$1").trim();
 function total(){return Object.values(S).reduce((a,b)=>a+b,0)}function pct(){return Math.round(total()/2)}function upd(){$("score").textContent=total()}function fb(id,ok,msg){let e=$(id);e.textContent=msg;e.className="feedback show "+(ok?"ok":"bad")}function show(id){document.querySelectorAll(".panel").forEach(x=>x.classList.toggle("active",x.id===id));document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.p===id));scrollTo(0,0)}document.querySelectorAll(".tab").forEach(x=>x.onclick=()=>show(x.dataset.p));document.querySelectorAll(".next").forEach(x=>x.onclick=()=>show(x.dataset.next));
 $("begin").onclick=()=>{const first=$("firstName").value.trim(),last=$("lastName").value.trim();if(!first||!last||!$("period").value){fb("infoF",false,"Enter your first name, last name, and choose your class period.");if(!first)$("firstName").focus();else if(!last)$("lastName").focus();else $("period").focus();return}$("activities").classList.remove("hidden");fb("infoF",true,"Your activities are ready.");show("review")};
@@ -20,4 +20,95 @@ $("left").value=C.leftStart;$("right").value=C.rightStart;const L=$("left").valu
 $("checkApply").onclick=()=>{let l=clean($("left").value),r=clean($("right").value),ok=C.needLeft.every(n=>l.includes(clean(n)))&&C.needRight.every(n=>r.includes(clean(n)));S.apply=ok?40:0;upd();fb("applyF",ok,ok?"Your final activity is correct. You may revise and check again.":C.applyError);if(ok){preview();results()}};$("reset").onclick=()=>{$("left").value=L;$("right").value=R;S.apply=0;upd();$("applyF").className="feedback";preview()};$("finish").onclick=results;
 function results(){$("submitBox").classList.remove("hidden");$("result").textContent=total()+" points out of 200 - Grade: "+pct()+"%";$("breakdown").innerHTML=Object.entries(S).map(x=>"<p><strong>"+x[0][0].toUpperCase()+x[0].slice(1)+":</strong> "+x[1]+" points</p>").join("");$("reviewMissed").classList.toggle("hidden",!Object.keys(miss).length);$("submitBox").scrollIntoView({behavior:"smooth"})}$("reviewMissed").onclick=()=>{let b=$("missed");b.classList.toggle("hidden");$("reviewMissed").textContent=b.classList.contains("hidden")?"Review Incorrect Answers":"Hide Review";b.innerHTML=Object.values(miss).map(m=>'<div class="miss">'+esc(m.q)+"<br><strong>Your answer:</strong> "+esc(m.y)+"<br><strong>Correct:</strong> "+esc(m.c)+"<br>"+esc(m.e)+"</div>").join("")};
 $("submit").onclick=()=>{let first=$("firstName").value.trim(),last=$("lastName").value.trim(),n=last+", "+first,p=$("period").value;if(!first||!last||!p){fb("submitF",false,"Enter your first name, last name, and class period.");if(!first)$("firstName").focus();else if(!last)$("lastName").focus();else $("period").focus();return}let f=document.createElement("form");f.method="POST";f.action="https://docs.google.com/forms/d/e/1FAIpQLSd4wTjzGT39UHEQ8WdzPMXfDMhVJ8d6BzioxzQXqz5zevRWdw/formResponse";f.target="formTarget";f.className="hidden";[["entry.2089413779",n],["entry.890934651",p],["entry.646173439",C.form],["entry.962158861",String(pct())]].forEach(x=>{let i=document.createElement("input");i.name=x[0];i.value=x[1];f.append(i)});document.body.append(f);f.submit();f.remove();$("submit").disabled=true;fb("submitF",true,"Your grade has been submitted.");$("noticeText").textContent=first+" "+last+", your grade of "+pct()+"% has been submitted.";$("notice").classList.remove("hidden")};$("close").onclick=()=>$("notice").classList.add("hidden");rq();preview();
-</script></body></html>
+</script>
+<style id="practiceRecoveryStyles">
+.recovery-tools{background:#fff8dc;border:3px solid #f2c94c;border-radius:14px;padding:17px 20px;margin:20px 0;box-shadow:0 7px 20px #32134a18}
+.recovery-tools h3{margin:0 0 8px;color:#51217a}.recovery-tools p{margin:7px 0;line-height:1.45}
+.recovery-tools .recovery-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.recovery-tools button{border:2px solid #51217a;border-radius:9px;padding:11px 15px;background:#51217a;color:#fff;font-weight:800;cursor:pointer}
+.recovery-tools button.secondary{background:#fff;color:#51217a}.recovery-status{font-weight:800;margin-top:10px!important}
+</style>
+<section id="practiceRecoveryTools" class="recovery-tools">
+  <h3>Saved Work &amp; Grade Recovery</h3>
+  <p>Your name, class period, and typed answers save automatically on this computer and browser.</p>
+  <p>If a submitted grade does not appear in the score report, click <strong>Submit Grade Again</strong>.</p>
+  <div class="recovery-buttons">
+    <button id="retrySavedGrade" type="button">Submit Grade Again</button>
+    <button id="clearSavedPractice" class="secondary" type="button">Clear Saved Work</button>
+  </div>
+  <p id="practiceRecoveryStatus" class="recovery-status" role="status" aria-live="polite"></p>
+</section>
+<script id="practiceRecoveryScript">
+(function(){
+  const baseKey="istPractice:"+location.pathname;
+  const draftKey=baseKey+":draft", pendingKey=baseKey+":pending";
+  const status=()=>document.getElementById("practiceRecoveryStatus");
+  const retry=()=>document.getElementById("retrySavedGrade");
+  let submittedNow=false;
+  function fields(){
+    return [...document.querySelectorAll("input[id],select[id],textarea[id]")].filter(el=>el.type!=="hidden");
+  }
+  function saveDraft(){
+    const data={};
+    fields().forEach(el=>{
+      if(el.type==="radio"||el.type==="checkbox") data[el.id]={checked:el.checked};
+      else data[el.id]={value:el.value};
+    });
+    localStorage.setItem(draftKey,JSON.stringify(data));
+  }
+  function restoreDraft(root=document){
+    let data={};try{data=JSON.parse(localStorage.getItem(draftKey)||"{}")}catch(e){}
+    [...root.querySelectorAll("input[id],select[id],textarea[id]")].forEach(el=>{
+      const v=data[el.id];if(!v)return;
+      if(el.type==="radio"||el.type==="checkbox") el.checked=!!v.checked;
+      else if(!el.value||el.tagName==="TEXTAREA") el.value=v.value??"";
+    });
+  }
+  document.addEventListener("input",saveDraft);
+  document.addEventListener("change",saveDraft);
+  const observer=new MutationObserver(list=>list.forEach(m=>m.addedNodes.forEach(n=>{
+    if(n.nodeType===1)restoreDraft(n);
+  })));
+  observer.observe(document.documentElement,{childList:true,subtree:true});
+  const nativeSubmit=HTMLFormElement.prototype.submit;
+  HTMLFormElement.prototype.submit=function(){
+    if(String(this.action).includes("docs.google.com/forms")){
+      const payload={action:this.action,target:this.target||"practiceRecoveryTarget",values:{}};
+      new FormData(this).forEach((v,k)=>payload.values[k]=String(v));
+      localStorage.setItem(pendingKey,JSON.stringify(payload));
+      submittedNow=true;
+      if(status())status().textContent="Sending grade to Google Forms… Keep this page open for a few seconds.";
+      if(retry())retry().disabled=false;
+    }
+    return nativeSubmit.call(this);
+  };
+  function send(payload){
+    let frame=document.querySelector('iframe[name="'+payload.target+'"]');
+    if(!frame){frame=document.createElement("iframe");frame.name=payload.target;frame.hidden=true;document.body.append(frame)}
+    const form=document.createElement("form");form.method="POST";form.action=payload.action;form.target=payload.target;form.hidden=true;
+    Object.entries(payload.values).forEach(([name,value])=>{const i=document.createElement("input");i.name=name;i.value=value;form.append(i)});
+    document.body.append(form);submittedNow=true;nativeSubmit.call(form);setTimeout(()=>form.remove(),1000);
+    if(status())status().textContent="Grade sent again. Keep this page open for five seconds, then check the score report.";
+  }
+  document.addEventListener("DOMContentLoaded",()=>{
+    restoreDraft();
+    const pending=localStorage.getItem(pendingKey);
+    if(status())status().textContent=pending?"A saved grade is available if you need to submit it again.":"Typed work will save automatically on this device.";
+    document.querySelectorAll("iframe[name]").forEach(frame=>frame.addEventListener("load",()=>{
+      if(!submittedNow)return;submittedNow=false;
+      if(status())status().textContent="Google Forms responded. Your grade was sent; use Submit Grade Again if it is missing from the report.";
+    }));
+    retry().onclick=()=>{
+      let p;try{p=JSON.parse(localStorage.getItem(pendingKey)||"null")}catch(e){}
+      if(!p){status().textContent="No saved grade is available yet. Finish the lab and click Submit My Results first.";return}
+      retry().disabled=true;send(p);setTimeout(()=>retry().disabled=false,5000);
+    };
+    document.getElementById("clearSavedPractice").onclick=()=>{
+      if(!confirm("Clear saved work and the saved grade from this computer?"))return;
+      localStorage.removeItem(draftKey);localStorage.removeItem(pendingKey);
+      status().textContent="Saved work was cleared. Refresh the page to start over.";
+    };
+  });
+})();
+</script>
+</body></html>
